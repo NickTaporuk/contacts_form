@@ -1,5 +1,14 @@
-#parameters:
-#    grossum_test_task.logger: Symfony\Bridge\Monolog\Logger
+parameters:
+    grossum_test_task.logger.class: GrossumTestTaskBundle\Monolog\ContactsLogger
 
 
-#services:
+services:
+    grossum_test_task.logger:
+        class: "%grossum_test_task.logger.class%"
+        arguments: ['@logger']
+        tags:
+            - { name: monolog.logger, channel: contacts }
+#    grossum_test_task_log_formatter:
+#                class:
+#                arguments:
+#                    - "[%%datetime%%] %%start_tag%% %%message%% %%end_tag%% %%context%% %%extra%%\n "
