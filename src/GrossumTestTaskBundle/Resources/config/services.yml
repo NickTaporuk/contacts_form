@@ -1,13 +1,5 @@
-parameters:
-    grossum_test_task.logger: Symfony\Bridge\Monolog\Logger
+#parameters:
+#    grossum_test_task.logger: Symfony\Bridge\Monolog\Logger
+
 
 #services:
-#    my_service.logger:
-#        class:     Symfony\Bridge\Monolog\Logger
-#        arguments: [app]
-#        calls:
-#            - [pushHandler, ["@my_service.logger_handler"]]
-#
-#    my_service.logger_handler:
-#        class:     Monolog\Handler\StreamHandler
-#        arguments: ["%kernel.logs_dir%/%kernel.environment%.admin.log", 200]

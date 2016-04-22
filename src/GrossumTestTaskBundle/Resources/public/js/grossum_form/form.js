@@ -69,9 +69,9 @@ validate.addClass = function( classname, element ) {
             errorClassName  = 'has-error';
 
          $(submitForm).on('click',function(e){
-             var validateForm    = true;
-             e.stopPropagation();
-             e.preventDefault();
+            var validateForm    = true;
+            e.stopPropagation();
+            e.preventDefault();
             var self = document.querySelector('form');
 
             for (var i=0; i<self.length; i++){
@@ -84,7 +84,6 @@ validate.addClass = function( classname, element ) {
                     validate.addClass(errorClassName,self[i]);
                 }
             }
-            console.log('validateForm:',validateForm);
              if(validateForm)
              {
 
@@ -97,7 +96,6 @@ validate.addClass = function( classname, element ) {
                      type: formMethod,
                      data: formData,
                      success: function (data) {
-                         //console.log(data);
                          if (data.code == 200 ) {
                              $(flashDiv.flash).addClass(flashDiv.success).html(data.message).fadeIn(3000);
                              setTimeout(function(){
@@ -126,10 +124,9 @@ validate.addClass = function( classname, element ) {
              }
         });
 
-         $(resetForm).on('click',function(e){
+        $(resetForm).on('click',function(e){
             e.stopPropagation();
             e.preventDefault();
-            //console.log('e.target.current:', e.currentTarget);
             var self = document.querySelector('form');
 
             for (var i=0; i<self.length; i++){
