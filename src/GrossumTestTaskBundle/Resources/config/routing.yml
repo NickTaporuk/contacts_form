@@ -1,0 +1,3 @@
+registr:
+    path:     /
+    defaults: { _controller: GrossumTestTaskBundle:Registr:registr }

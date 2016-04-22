@@ -1,0 +1,32 @@
+GrossumTestTaskBundle\Entity\Contacts:
+    type: entity
+    table: null
+    repositoryClass: GrossumTestTaskBundle\Repository\ContactsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: '50'
+            column: first_name
+        lastName:
+            type: string
+            length: '50'
+            column: last_name
+        age:
+            type: float
+            nullable: true
+        email:
+            type: string
+            length: '100'
+        subject:
+            type: string
+            length: '100'
+        message:
+            type: text
+            nullable: true
+    lifecycleCallbacks: {  }

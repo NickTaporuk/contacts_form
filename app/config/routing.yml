@@ -1,0 +1,7 @@
+grossum_test_task:
+    resource: "@GrossumTestTaskBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

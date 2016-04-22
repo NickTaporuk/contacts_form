@@ -1,0 +1,15 @@
+parameters:
+    grossum_test_task.logger: Symfony\Bridge\Monolog\Logger
+
+services:
+#        arguments: ["@monolog.logger.chain"]
+
+    grossum_test_task.monolog_console_processor:
+        class: %grossum_test_task.logger%
+        tags:
+            - { name: monolog.logger, channel: chain }
+
+    grossum_test_task_log_formatter:
+                class: %grossum_test_task.logger%
+                arguments:
+                    - "[%%datetime%%] %%start_tag%% %%message%% %%end_tag%% %%context%% %%extra%%\n"

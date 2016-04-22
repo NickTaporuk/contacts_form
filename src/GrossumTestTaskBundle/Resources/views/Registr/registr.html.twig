@@ -1,0 +1,78 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Test Task{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/grossumtesttask/bower_components/bootstrap/dist/css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/grossumtesttask/bower_components/bootstrap/dist/css/bootstrap-theme.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/grossumtesttask/css/form.css') }}"/>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h3>Test task</h3>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {#<div class="alert alert-danger hidden-block">#}
+            <div class="alert hidden-block">
+                <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+            </div>
+            {{ form_start(form, {'action': path('registr'), 'method': 'POST','attr': {'id': 'form-contacts', 'novalidate':'novalidate'}}) }}
+            <fieldset class="form-group">
+                {{ form_label(form.firstName) }}
+                {{ form_errors(form.firstName) }}
+                {{ form_widget(form.firstName, { 'attr': {'class': 'form-control '} }) }}
+            </fieldset>
+
+            <fieldset class="form-group">
+                {{ form_label(form.lastName) }}
+                {{ form_errors(form.lastName) }}
+                {{ form_widget(form.lastName, { 'attr': {'class': 'form-control'} }) }}
+            </fieldset>
+
+            <fieldset class="form-group">
+                {{ form_label(form.age) }}
+                {{ form_errors(form.age) }}
+                {{ form_widget(form.age, { 'attr': {'class': 'form-control','data-validate': '1'} }) }}
+            </fieldset>
+
+            <fieldset class="form-group">
+                {{ form_label(form.email) }}
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email, { 'attr': {'class': 'form-control'} }) }}
+            </fieldset>
+
+            <fieldset class="form-group">
+                {{ form_label(form.subject) }}
+                {{ form_errors(form.subject) }}
+                {{ form_widget(form.subject, { 'attr': {'class': 'form-control'} }) }}
+            </fieldset>
+
+            <fieldset class="form-group">
+                {{ form_label(form.message) }}
+                {{ form_errors(form.message) }}
+                {{ form_widget(form.message, { 'attr': {'class': 'form-control'} }) }}
+            </fieldset>
+
+            <fieldset class="form-group">
+                {{ form_widget(form.submit, { 'attr': {'class': 'btn btn-secondary form__submit'} }) }}
+                {{ form_widget(form.reset, { 'attr': {'class': 'btn btn-danger'} }) }}
+                {{ form_end(form) }}
+            </fieldset>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('bundles/grossumtesttask/bower_components/jquery/dist/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/grossumtesttask/js/grossum_form/form.js') }}"></script>
+{% endblock %}
