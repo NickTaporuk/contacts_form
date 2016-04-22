@@ -84,7 +84,6 @@ validate.addClass = function( classname, element ) {
                     validate.addClass(errorClassName,self[i]);
                 }
             }
-            console.log('validateForm:',validateForm);
              if(validateForm)
              {
 
