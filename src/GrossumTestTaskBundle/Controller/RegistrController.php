@@ -7,6 +7,8 @@ use GrossumTestTaskBundle\Form\ContactsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
 
 class RegistrController extends Controller
 {
