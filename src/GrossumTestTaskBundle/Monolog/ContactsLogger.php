@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: nick
- * Date: 22.04.16
- * Time: 12:40
- */
 
 namespace GrossumTestTaskBundle\Monolog;
 
